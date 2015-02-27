@@ -1,6 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
+gem 'dotenv'
 gem 'rake'
 gem 'activesupport'
 
@@ -10,7 +11,7 @@ gem 'sinatra-activerecord'
 
 gem 'puma'
 gem 'tux'
-gem 'sqlite3'
+
 group :development, :test do
   gem 'pry'
   gem 'shotgun'
