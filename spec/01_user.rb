@@ -13,12 +13,11 @@ RSpec.describe User do
   end
 
   describe '#username' do
-    it 'should be abe to get user\'s user name' do
+    it 'should be able to get user\'s user name' do
       expect { @user.username }.to_not raise_error
     end
 
     it 'is required' do
-      # @user = User.new
       @user.username = nil
       expect(@user).to_not be_valid
       expect(@user.errors[:username]).to include "can't be blank"
@@ -30,7 +29,6 @@ RSpec.describe User do
       user1.save
 
       expect(@user).to_not be_valid
-      puts @user.errors.inspect
       expect(@user.errors[:username]).to include "has already been taken"
     end
   end

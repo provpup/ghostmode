@@ -11,7 +11,9 @@ require 'dotenv'
 Dotenv.load
 
 require_relative 'app/models/user'
+require_relative 'app/models/gpspoint'
 require_relative 'factories/spec/user'
+require_relative 'factories/spec/gpspoint'
 
 db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
@@ -43,6 +45,14 @@ RSpec.configure do |config|
   end
   config.after(:each) do
     DatabaseCleaner.clean
+  end
+
+  config.mock_with(:rspec) do |mocks|
+    # This option should be set when all dependencies are being loaded
+    # before a spec run, as is the case in a typical spec helper. It will
+    # cause any verifying double instantiation for a class that does not
+    # exist to raise, protecting against incorrectly spelt names.
+    mocks.verify_doubled_constant_names = true
   end
 end
 
