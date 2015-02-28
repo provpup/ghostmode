@@ -6,8 +6,6 @@ require 'active_support/all'
 # Load Sinatra Framework (with AR)
 require 'sinatra'
 require 'sinatra/activerecord'
-require 'geokit'
-# require 'geokit-rails'
 require 'dotenv'
 Dotenv.load
 
