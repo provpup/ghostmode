@@ -15,6 +15,7 @@ Dotenv.load
 require_relative 'app/models/user'
 require_relative 'app/models/gpspoint'
 require_relative 'app/models/route'
+require_relative 'app/models/run'
 require_relative 'factories/spec/user'
 require_relative 'factories/spec/gpspoint'
 require_relative 'factories/spec/route'
