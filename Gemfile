@@ -14,6 +14,11 @@ gem 'sinatra-activerecord'
 gem 'puma'
 gem 'tux'
 
+gem 'rspec'
+gem 'factory_girl'
+gem 'faker'
+gem 'database_cleaner'
+
 group :development, :test do
   gem 'pry'
   gem 'shotgun'
