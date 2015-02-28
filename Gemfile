@@ -4,6 +4,8 @@ source "https://rubygems.org"
 gem 'dotenv'
 gem 'rake'
 gem 'activesupport'
+gem 'nokogiri'
+gem 'pry-nav'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
