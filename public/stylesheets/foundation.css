@@ -2950,7 +2950,7 @@ meta.foundation-mq-topbar {
       .orbit-container .orbit-slides-container > * .orbit-caption {
         position: absolute;
         bottom: 0;
-        background-color: rgba(51, 51, 51, 0.8);
+        background-color: #fc4c02;
         color: #FFFFFF;
         width: 100%;
         padding: 0.625rem 0.875rem;
