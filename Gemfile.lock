@@ -19,7 +19,13 @@ GEM
     bond (0.4.3)
     builder (3.2.2)
     coderay (1.1.0)
+    database_cleaner (1.4.0)
+    diff-lcs (1.2.5)
     dotenv (1.0.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     i18n (0.7.0)
     json (1.8.2)
     method_source (0.8.2)
@@ -51,6 +57,19 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5)
       ripl (>= 0.3.5)
+    rspec (3.2.0)
+      rspec-core (~> 3.2.0)
+      rspec-expectations (~> 3.2.0)
+      rspec-mocks (~> 3.2.0)
+    rspec-core (3.2.1)
+      rspec-support (~> 3.2.0)
+    rspec-expectations (3.2.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-mocks (3.2.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.2.0)
+    rspec-support (3.2.2)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.4)
@@ -82,13 +101,17 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport
+  database_cleaner
   dotenv
+  factory_girl
+  faker
   nokogiri
   pg
   pry
   pry-nav
   puma
   rake
+  rspec
   shotgun
   sinatra
   sinatra-activerecord
