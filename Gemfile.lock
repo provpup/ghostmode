@@ -23,13 +23,18 @@ GEM
     i18n (0.7.0)
     json (1.8.2)
     method_source (0.8.2)
+    mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     pg (0.18.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
     puma (2.7.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -79,8 +84,10 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   dotenv
+  nokogiri
   pg
   pry
+  pry-nav
   puma
   rake
   shotgun
