@@ -16,7 +16,6 @@ class CreateInitialTables < ActiveRecord::Migration
       table.references :route
     end
 
-    # Implement Single Table Inheritance for GPS points/run points
     create_table :gps_points do |table|
       # Need to setup polymorphic association
       table.references :pointable, polymorphic: true
@@ -25,7 +24,5 @@ class CreateInitialTables < ActiveRecord::Migration
       table.float :latitude
       table.timestamp :gps_timestamp
     end
-
-
   end
 end
