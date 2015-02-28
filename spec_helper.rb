@@ -4,6 +4,8 @@ require 'bundler/setup'
 require 'active_support/all'
 
 require 'active_record'
+require 'rspec/collection_matchers'
+
 require 'factory_girl'
 require 'faker'
 require 'database_cleaner'
@@ -12,8 +14,10 @@ Dotenv.load
 
 require_relative 'app/models/user'
 require_relative 'app/models/gpspoint'
+require_relative 'app/models/route'
 require_relative 'factories/spec/user'
 require_relative 'factories/spec/gpspoint'
+require_relative 'factories/spec/route'
 
 db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
