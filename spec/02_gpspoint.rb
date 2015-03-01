@@ -56,5 +56,16 @@ RSpec.describe GpsPoint do
     end
   end
 
-  
+  describe '.closest_point' do
+
+    it 'should find the closest point' do
+      point1 = GpsPoint.create(latitude: @point.latitude - 0.0005, longitude: @point.longitude - 0.0005)
+      point2 = GpsPoint.create(latitude: @point.latitude + 0.0002, longitude: @point.longitude - 0.0004)
+      point3 = GpsPoint.create(latitude: @point.latitude + 0.0007, longitude: @point.longitude - 0.0008)
+      point4 = GpsPoint.create(latitude: @point.latitude + 0.0006, longitude: @point.longitude - 0.0011)
+
+      chosen_point = GpsPoint.closest_point(@point, [point1, point2, point3, point4].map {|point| point.id})
+      expect(chosen_point.id).to equal(point2.id)
+    end
+  end
 end

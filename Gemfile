@@ -7,6 +7,9 @@ gem 'activesupport'
 gem 'nokogiri'
 gem 'pry-nav'
 
+gem 'json'
+gem 'geocoder'
+
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'

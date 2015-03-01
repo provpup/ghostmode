@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227000917) do
+ActiveRecord::Schema.define(version: 20150301021708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20150227000917) do
     t.float    "latitude"
     t.datetime "gps_timestamp"
   end
+
+  add_index "gps_points", ["latitude", "longitude"], name: "index_gps_points_on_latitude_and_longitude", using: :btree
 
   create_table "routes", force: :cascade do |t|
     t.string   "name"

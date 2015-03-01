@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'active_support/all'
 
 require 'active_record'
+require 'geocoder'
 require 'rspec/collection_matchers'
 
 require 'factory_girl'
