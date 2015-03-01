@@ -6,9 +6,8 @@ class TimeJudge
   def self.split_times(run1, run2)
     raise(ArgumentError, 'Run objects belongs to different routes') if run1.route_id != run2.route_id
 
-    checkpoint_split_times = []
     route = Route.find(run1.route_id)
-    checkpoints = route.gps_points
+    checkpoints = route.gps_points.to_a
 
     # Find the GPS coordinates for each run that is closest to the checkpoints
     # and then merge them into one array
@@ -20,13 +19,15 @@ class TimeJudge
     # two GpsPoint objects each (one from each run)
     # We compute the relative time of each segment by examining
     # two elements of the larger array at a time
+    checkpoint_split_times = []
     milestones.each_cons(2) do |race_segment|
       run1_relative_time = race_segment[-1].first.gps_timestamp - race_segment[0].first.gps_timestamp
       run2_relative_time = race_segment[-1].last.gps_timestamp - race_segment[0].last.gps_timestamp
 
       checkpoint_split_times << (run2_relative_time - run1_relative_time)
     end
-    # Get rid of the first checkpoint because we have one fewer split time value than checkpoint
+    # Get rid of the first checkpoint (the starting point) because we have
+    # one fewer split time value than checkpoint
     checkpoints.shift
 
     # Return a hash between checkpoint and the two runs' split times
