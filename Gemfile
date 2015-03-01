@@ -15,6 +15,7 @@ gem 'puma'
 gem 'tux'
 
 gem 'rspec'
+gem 'rspec-collection_matchers'
 gem 'factory_girl'
 gem 'faker'
 gem 'database_cleaner'
