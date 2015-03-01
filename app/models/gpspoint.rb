@@ -10,7 +10,8 @@ class GpsPoint < ActiveRecord::Base
 
   belongs_to :pointable, polymorphic: true
 
-  def self.closest_point(origin, candidate_point_ids)
-    self.where(id: candidate_point_ids).near([origin.latitude, origin.longitude], 20, units: :km).first
+  def self.closest_point(origin, candidate_points)
+    candidate_points.map! { |point| point.id }
+    self.where(id: candidate_points).near([origin.latitude, origin.longitude], 20, units: :km).limit(1).first
   end
 end
