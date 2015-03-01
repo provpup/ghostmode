@@ -1924,7 +1924,7 @@ meta.foundation-mq-topbar {
       background-color: #555555;
       background: #333333;
       color: #FFFFFF; }
-    .top-bar-section ul li.active > a {
+    .top-bar-section ul li.h4 > a {
       background: #008CBA;
       color: #FFFFFF; }
       .top-bar-section ul li.active > a:hover {
@@ -2959,7 +2959,7 @@ meta.foundation-mq-topbar {
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 12px;
+    font-size: 5px;
     color: #FFFFFF;
     background: transparent;
     z-index: 10; }
@@ -3653,13 +3653,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #5E2F6E;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    font-size: 60%;
+    font-size: 50%;
     color: #6f6f6f;
     line-height: 0; }
 
@@ -6200,3 +6200,9 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+
+
+    .full_width {
+      margin:0 auto;
+    width:100%;}

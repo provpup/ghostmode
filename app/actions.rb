@@ -3,6 +3,9 @@ get '/' do
   erb :index
 end
 
+get '/user/dashboard' do
+  erb :'dashboard'
+end
 # get '/user_checktimes' do
 #   @ary = ['a','b','c','e','f']
 #   erb :'user_checktimes'
