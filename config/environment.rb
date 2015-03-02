@@ -6,6 +6,10 @@ require 'active_support/all'
 # Load Sinatra Framework (with AR)
 require 'sinatra'
 require 'sinatra/activerecord'
+
+require 'json'
+require 'geocoder'
+
 require 'dotenv'
 Dotenv.load
 
@@ -28,5 +32,6 @@ end
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
+require APP_ROOT.join('app', 'timejudge')
 # Load the routes / actions
 require APP_ROOT.join('app', 'actions')
