@@ -3,6 +3,23 @@ require_relative 'models/route'
 
 class TimeJudge
 
+  def self.run_checkpoint_times(run)
+    route = Route.find(run.route_id)
+    checkpoints = route.gps_points.to_a
+
+    run_candidate_milestones = checkpoints.map { |checkpoint| GpsPoint.closest_point(checkpoint, run.gps_points) }
+
+    relative_times = []
+    run_candidate_milestones.each_cons(2) do |race_segment|
+      run_relative_time = race_segment[-1].gps_timestamp - race_segment[0].gps_timestamp
+      relative_times << run_relative_time
+    end
+
+    checkpoints.shift
+
+    Hash[checkpoints.zip(relative_times)]
+  end
+
   def self.split_times(run1, run2)
     raise(ArgumentError, 'Run objects belongs to different routes') if run1.route_id != run2.route_id
 
