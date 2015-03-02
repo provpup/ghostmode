@@ -15,7 +15,9 @@ get '/user/post' do
   erb :'post'
 end
 
-
+get '/video' do
+  erb :'video'
+end
 
 # get '/user_checktimes' do
 #   @ary = ['a','b','c','e','f']
