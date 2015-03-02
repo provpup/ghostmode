@@ -10,8 +10,13 @@ class GpsPoint < ActiveRecord::Base
 
   belongs_to :pointable, polymorphic: true
 
-  def self.closest_point(origin, candidate_points)
+  def self.closest_point(origin, previous_gps_time_source = nil, candidate_points)
     point_ids = candidate_points.to_a.map { |point| point.id }
-    self.where(id: point_ids).near([origin.latitude, origin.longitude], 20, units: :km).limit(1).first
+    if previous_gps_time_source
+      selection = self.where(id: point_ids).where("gps_timestamp >= ?", previous_gps_time_source.gps_timestamp)
+    else
+      selection = self.where(id: point_ids)
+    end
+    selection.near([origin.latitude, origin.longitude], 10, units: :km).limit(1).first
   end
 end

@@ -11,8 +11,6 @@ def create_route_checkpoints(points)
 
   data_points << last_point
 
-puts data_points.inspect
-
   data_points.map { |point| GpsPoint.create(latitude: point[0], longitude: point[1], gps_timestamp: point[2]) }
 end
 

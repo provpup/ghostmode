@@ -7,9 +7,9 @@
     <aside class="left-off-canvas-menu">
         <!-- whatever you want goes here -->
         <ul>
-          <li><a href="http://localhost:3000/">Home</a></li>
-          <li><a href="http://localhost:3000/user/dashboard">Dashboard</a></li>
-          <li><a href="http://localhost:3000/user/route">Route</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/user/dashboard">Dashboard</a></li>
+          <li><a href="/user/route">Route</a></li>
         ...
         </ul>
     </aside>
@@ -49,5 +49,14 @@
   </ul>
 
   </div>
+</div>
+
+<div>
+  <form method="POST" action="/comparison">
+    <input type="hidden" value="1" name="route_id">
+    <input type="hidden" value="1" name="user_id">
+    <input type="hidden" value="1" name="compartive_user_id">
+    <input type="Submit" value="Find Opponents">
+  </form>
 </div>
      

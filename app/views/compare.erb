@@ -1,0 +1,25 @@
+<table>
+  <tr><th>Checkpoints</th>
+<% @check_points.each do |cp| %>
+    <td><%= "(#{cp.latitude}, #{cp.longitude})" %></td>
+<% end %>
+  </tr>
+  <tr><th>User 1</th>
+<% @run1.each do |reltime| %>
+    <td><%= "#{reltime}" %></td>
+<% end %>
+  </tr>
+  <tr><th>Rival User</th>
+<% @run2.each do |reltime| %>
+    <td><%= "#{reltime}" %></td>
+<% end %>
+  </tr>
+  <tr><th>Split times</th>
+<% @split_times.each do |split| %>
+  <td><%= "#{split}" %></td>
+<% end %>
+  </tr>
+  <tr>
+  </tr>
+</table>
+<div><%= @winner_message %></div>
