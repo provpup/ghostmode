@@ -6,6 +6,17 @@ end
 get '/user/dashboard' do
   erb :'dashboard'
 end
+
+get '/user/route' do
+  erb :'route'
+end
+
+get '/user/post' do
+  erb :'post'
+end
+
+
+
 # get '/user_checktimes' do
 #   @ary = ['a','b','c','e','f']
 #   erb :'user_checktimes'

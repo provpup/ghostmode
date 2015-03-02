@@ -1437,11 +1437,11 @@ label {
 
 /* Separate prefix and postfix styles when on span or label so buttons keep their own */
 span.prefix, label.prefix {
-  background: #f2f2f2;
+  background: #fc4c02;
   border-right: none;
   color: #333333;
-  border-color: #cccccc; }
-
+  border-color: #cccccc; } 
+}
 span.postfix, label.postfix {
   background: #f2f2f2;
   border-left: none;
@@ -6202,7 +6202,6 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 
-
-    .full_width {
-      margin:0 auto;
-    width:100%;}
+.nav-text {
+  color: #fc4c02
+}
