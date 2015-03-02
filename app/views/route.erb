@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+  function initialize() {
+    var mapProp = {
+    center:new google.maps.LatLng(49.2824370,-123.1080380),
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+  <body>
+  <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+
+    <a class="left-off-canvas-toggle" href="#" >MENU</a>
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+        <!-- whatever you want goes here -->
+        <ul>
+          <li><a href="http://localhost:3000/">Home</a></li>
+          <li><a href="http://localhost:3000/user/dashboard">Dashboard</a></li>
+          <li><a href="http://localhost:3000/user/route">Route</a></li>
+        ...
+        </ul>
+    </aside>
+
+    <!-- main content goes here -->
+    <p class="nav-text">Plan your next attack</p>
+
+  <!-- close the off-canvas menu -->
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+    <div class="small-12 columns"> 
+    <div id="googleMap" style="width:1280px;height:480px;"></div>
+    </div>
+  </body>
+
+</html>
+

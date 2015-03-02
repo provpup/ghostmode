@@ -7,6 +7,12 @@ require 'active_support/all'
 require 'sinatra'
 require 'sinatra/activerecord'
 
+require 'json'
+require 'geocoder'
+
+require 'dotenv'
+Dotenv.load
+
 require 'pry'
 
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -26,5 +32,6 @@ end
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
+require APP_ROOT.join('app', 'timejudge')
 # Load the routes / actions
 require APP_ROOT.join('app', 'actions')

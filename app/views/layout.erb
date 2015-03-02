@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!--
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/stylesheets/application.css">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ghostmode | landing</title>
+    <link rel="stylesheet" href="/stylesheets/foundation.css" />
+    <link rel="stylesheet" href="/stylesheets/normalize.css" />
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    
+  <%= yield %>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/javascript/application.js"></script>
-
-  <title></title>
-</head>
-<body>
-  <%= yield %>
-</body>
+  <script src="/javascript/vendor/jquery.js"></script>
+  <script src="/javascript/foundation.min.js"></script>
+  <script src="/javascript/foundation/foundation.orbit.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
 </html>
+
+
+
+
+
+
+ 
