@@ -50,13 +50,21 @@
 
   </div>
 </div>
+<a href="/compare" class="nice blue radius button split">Route Select <span data-dropdown="drop"></span></a><br>
+<ul id="drop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">Route 1</a></li>
+  <li><a href="#">Route 2</a></li>
+  <li><a href="#">Route 3</a></li>
+</ul>
 
 <div>
   <form method="POST" action="/comparison">
     <input type="hidden" value="1" name="route_id">
     <input type="hidden" value="1" name="user_id">
     <input type="hidden" value="1" name="compartive_user_id">
-    <input type="Submit" value="Find Opponents">
+    <input class="nice blue radius button" type="Submit" value="Route Compare">
   </form>
 </div>
+
+
      
