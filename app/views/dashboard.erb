@@ -29,19 +29,19 @@
  
   <ul class="full_width" data-orbit>
    <li>
-     <img src="/images/fastest_splash_v2.jpg" alt="slide 1" />
+     <img src="/images/fastest_splash_v3.jpg" alt="slide 1" />
      <div class="orbit-caption">
        GHOSTMODE FASTEST
      </div>
    </li>
    <li class="active">
-     <img src="/images/farthest_splash_v2.jpg" alt="slide 2" />
+     <img src="/images/farthest_splash_v3.jpg" alt="slide 2" />
      <div class="orbit-caption">
        GHOSTMODE FARTHEST
      </div>
    </li>
    <li>
-     <img src="/images/last_splash.jpg" />
+     <img src="/images/last_splash_v3.jpg" />
      <div class="orbit-caption">
        GHOSTMODE LAST
      </div>
@@ -50,13 +50,21 @@
 
   </div>
 </div>
+<a href="/compare" class="nice blue radius button split">Route Select <span data-dropdown="drop"></span></a><br>
+<ul id="drop" class="f-dropdown" data-dropdown-content>
+  <li><a href="#">Route 1</a></li>
+  <li><a href="#">Route 2</a></li>
+  <li><a href="#">Route 3</a></li>
+</ul>
 
 <div>
   <form method="POST" action="/comparison">
     <input type="hidden" value="1" name="route_id">
     <input type="hidden" value="1" name="user_id">
     <input type="hidden" value="1" name="compartive_user_id">
-    <input type="Submit" value="Find Opponents">
+    <input class="nice blue radius button" type="Submit" value="Route Compare">
   </form>
 </div>
+
+
      
